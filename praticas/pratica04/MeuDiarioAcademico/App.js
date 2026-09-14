@@ -6,8 +6,8 @@ import {
   View,
   Pressable,
   Switch,
-  SafeAreaView
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import {
   titulo,
   input,
