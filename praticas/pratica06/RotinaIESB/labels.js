@@ -1,7 +1,3 @@
-// labels.js
-// Aula 03 — Import/export: arquivo centralizado de rótulos (textos) do app.
-// Usar "export const" (export nomeado) para cada rótulo.
-
 export const tituloApp = 'RotinaIESB';
 export const subtituloApp = 'Organize sua rotina acadêmica';
 
