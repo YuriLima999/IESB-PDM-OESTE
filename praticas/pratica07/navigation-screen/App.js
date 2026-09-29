@@ -4,7 +4,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer as NavigatorContainer } from "@react-navigation/native";
 import DespesasRecentes from "./screens/DespesasRecentes";
 import TodasDespesas from "./screens/TodasDespesas";
-import GerenciarDespesa from "./screens/GerenciarDespesa";        
+import GerenciarDespesa from "./screens/GerenciarDespesa";
+import { Ionicons } from "@expo/vector-icons";        
+import { Header } from "@react-navigation/stack";
 
 export default function App() {
   
@@ -21,7 +23,8 @@ export default function App() {
   return (
     <NavigatorContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Despesas" component={BottomTabScreen} />
+        <Stack.Screen name="Despesas" component={BottomTabScreen} 
+        options={{headerShown: false}}/>
         <Stack.Screen name="Gerenciar Despesa" component={GerenciarDespesa} />
       </Stack.Navigator>
     </NavigatorContainer>
