@@ -1,0 +1,19 @@
+import { useEffect, useRef } from 'react';
+import { Animated } from 'react-native';
+
+function FadeIn({ children, duration = 500, delay = 0, style }) {
+  const opacity = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    Animated.timing(opacity, {
+      toValue: 1,
+      duration,
+      delay,
+      useNativeDriver: true,
+    }).start();
+  }, [opacity, duration, delay]);
+
+  return <Animated.View style={[style, { opacity }]}>{children}</Animated.View>;
+}
+
+export default FadeIn;
